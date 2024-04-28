@@ -1,0 +1,194 @@
+/*h1{
+    text-align:center;
+    color:blueviolet;
+}
+label{
+    display:block;
+    text-align: center;
+    font-size: 10em;
+}
+#buttonContainer{
+    text-align: center;
+}
+.buttons{
+    padding:10px;
+    font-size: 1.5em;
+    background-color: rgb(243, 110, 110);
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    transition:background-color 0.25s;
+}
+.buttons:hover{
+    background-color:rgb(224, 69, 69) ;
+}
+body{
+    text-align:center;
+}
+#myButton{
+    
+    padding:5px;
+    font-size:3em;
+}
+.myLabels{
+    
+    font-size: 3em;
+}
+
+body{
+    background-color: rgb(133, 138, 138);
+}
+form{
+    background-color: azure;
+    text-align:center;
+    max-width: fit-content;
+    margin:auto;
+    border-radius:25px;
+    padding:10px 15px;
+}
+h1{
+    color:rgb(78, 134, 134)
+}
+#textBox{
+    text-align: center;
+    font-size:1.5em;
+    margin-bottom:18px;
+    border:2px solid rgb(116, 113, 113);
+    border-radius:5px;
+}
+label{
+    font-weight: bold;
+    font-size:1.2em;
+}
+#myButton{
+    margin-top: 15px;
+    font-size:1.1em;
+    font-weight: bold;
+    background-color: rgb(112, 208, 208);
+    color:white;
+    cursor:pointer;
+    border:2px solid grey;
+    border-radius:2px;
+    padding:2px 2px;
+}
+#myButton:hover{
+    background-color: rgb(193, 239, 239);
+}
+body{
+    background-image: url(./newyork.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin:0;
+}
+#clock-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+#clock{
+    font-size:6.5em;
+    color:antiquewhite;
+    backdrop-filter:blur(5px);
+    width:50%;
+    text-align: center;
+}
+h1{
+    font-size:6em;
+    color:rgb(43, 40, 40);
+    text-align: center;
+}
+body{
+    background-color: antiquewhite;
+}
+#container{
+    
+    justify-content:center;
+    text-align: center;
+    padding:20px;
+}
+#display{
+    margin:10px;
+    font-size: 3em;
+}
+#controls button{
+    padding:10px 15px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+calculator
+
+#container
+{
+    max-width:500px;
+    background-color: black;
+    overflow:hidden;
+}
+button
+{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background-color:rgb(46, 44, 44);
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+.operator{
+    background-color: orange;
+}
+button:hover
+{
+    background-color: rgb(64, 62, 62);
+}
+#display
+{
+    width:100%;
+    border:none;
+    background-color: rgb(59, 57, 57);
+    font-size:3em;
+    color:white;
+    text-align:center;
+}
+#keys{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    padding:25px;
+}*/
+
+/*.box{
+    border:3px solid;
+    width:100%;
+    height:125px;
+}*/
+
+/*ol{
+    border:2px solid;
+    width:100%;
+    font-size: 2em;
+}*/
+
+#myBox
+{
+    background-color: lightgreen;
+    width:300px;
+    height:300px;
+    font-size: 3rem;
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
