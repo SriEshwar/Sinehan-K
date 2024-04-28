@@ -1,0 +1,300 @@
+/*body{
+    background-color: black;
+}
+h1{
+    color:white;
+    font-family: "Rubik Doodle Shadow";
+    border-style:solid;
+    border-width:3px;
+    border-color:violet;
+    border-radius:10px;
+    text-shadow:-4px -4px 5px red;
+}
+.odd
+{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:1em;
+    font-style:italic;
+    border-bottom:solid 2px red;
+    border-top:dashed 3px yellow;
+    border-right:indigo 2px inset;
+    border-left:blue 3px outset;
+}
+.even
+{
+    color:violet;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+.box1{
+    width:100px;
+    height:100px;
+    background-color: violet;
+    box-shadow:3px 4px 5px white;
+}
+.box{
+    height:200px;
+    width:200px;
+    color:white;
+    border:3px solid red;
+    margin:80px;
+}
+#box11
+{
+background-color: aquamarine;
+margin:auto;
+
+}
+#box22
+{
+background-color: yellowgreen;
+margin-left:auto;
+}
+body{
+    border:2px solid red;
+    display:flow-root;
+}
+#bs{
+    float:left;
+    margin-right:50px;
+}
+#ny
+{
+    float:right;
+}
+.over{
+    border:2px solid;
+    height:100px;
+    width:200px;
+    overflow: auto;
+    
+}
+div{
+    background-color: red;
+    height:100px;
+    width:100px;
+    display:inline-block;
+    
+}
+span{
+    background-color:blueviolet;
+    height:100px;
+    width:100px;
+    display:inline-block;
+}
+.container{
+    border:2px solid black;
+    height:100vh;
+    width:auto;
+    
+}
+.box{
+    border:2px solid rosybrown;
+    height:auto;
+    width:50%;
+    box-sizing:border-box;
+    text-align:center;
+    float:left;
+    padding:25px;
+}
+
+.box1{
+    height:100px;
+    width:100px;
+    background-color:violet;
+    position:sticky;
+    top:0px;
+}
+.box2{
+    height:50px;
+    width:50px;
+    background-color: brown;
+    position:absolute;
+    bottom:0px;
+    
+}
+
+body{
+    background-image:url(./painting-mountain-lake-with-mountain-background.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+#container{
+    border:2px solid;
+}
+#container + p{
+    background-color:red;
+}
+
+a:active{
+    color:red;
+}
+
+li:nth-child(2n){
+    background-color:violet;
+}
+
+#container p{
+    padding:5px;
+    background-color:aqua;
+    display:none;
+}
+#container:hover p{
+    display:block;
+}
+
+h1::first-letter{
+    color:red;
+    font-style: italic;
+}
+p::first-line{
+    background-color:violet;
+}
+#fruit li::marker{
+    content:"❤️";
+}
+#apple::after{
+    content:"🍎";
+}
+
+.pagination
+{
+    text-align:center;
+}
+.pagination a{
+    color:black;
+    padding:8px 15px;
+    text-decoration:none;
+}
+.pagination a.active
+{
+    background-color: lightgreen;
+    font-weight: bold;
+}
+.pagination a:hover:not(.active)
+{
+    background-color: grey;
+}
+.dropdown{
+  display:inline-block;
+}
+.dropdown button{
+    padding:10px 10px;
+    cursor:pointer;
+    border:none;
+    background-color:violet;
+    font-weight: bold;
+}
+.dropdown a{
+    text-decoration:none;
+    color:black;
+    display:block;
+    padding:10px 10px;
+}
+.content
+{
+    background-color:yellow;
+    position:absolute;
+    display:none;
+}
+.dropdown:hover .content{
+    display: block;
+}
+.content a:hover{
+    background-color: aqua;
+}
+body{
+    margin:0px;
+}
+h1{
+    text-align:center;
+    color:rgb(71, 19, 120);
+    text-shadow:-3px -3px 3px red;
+}
+.navbar{
+    background-color:gray;
+}
+.navbar ul{
+    list-style-type: none;
+    padding:10px 10px;
+    margin:0px;
+}
+.navbar a{
+    text-decoration:none;
+    color:white;
+    padding:10px 10px;
+    margin:none;
+}
+.navbar a:hover{
+    background-color: red;
+}
+.navbar ul li{
+    display:inline;
+    margin:none;
+}
+.gallery
+{
+    display:inline-block;
+    width:200px;
+    border:2px solid blueviolet;
+}
+.gallery img{
+    width:200px;
+    height:200px;
+}
+.gallery:hover{
+    border:3px solid rgb(44, 5, 80)
+}
+.gallery .description 
+{
+    padding:5px;
+    text-align:center;
+    color:rgb(90, 7, 90);
+    font-weight: bold;
+    text-shadow: -3px -4px 5px red;
+}
+
+.container
+{
+    display:flex;
+    height:90vh;
+    border:5px solid black;
+    flex-wrap:wrap;
+}
+.box{
+ width:200px;
+ height:200px;
+ border-radius:5px;
+ font-size: 8em;
+ text-align:center;
+}
+
+#box1{
+    background-color:rgb(236, 98, 98);
+}
+#box2{
+    background-color:rgb(98, 236, 167);
+}
+#box3{
+    background-color:rgb(222, 236, 98);
+}
+#box4{
+    background-color:rgb(197, 115, 244);
+}
+img{
+    transform:translateX(100%) rotateZ(45deg) skewX(45deg);
+}
+
+img{
+    animation-name:slideright;
+    animation-duration:3s;
+    animation-iteration-count:3;
+    animation-direction:alternate;
+}
+@keyframes slideright
+{
+    to{transform:translateX(100%)}
+}*/

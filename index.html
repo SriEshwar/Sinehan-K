@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <a href="./lyrics.html" target="_blank" title="Blank Space">Song Lyric</a>
+    <br>
+    <a href="mailto:sinehansathi7@gmail.com">Mail me</a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae exercitationem,<span style="background-color: tomato;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea explicabo fugiat libero quia expedita nihil quasi voluptate nobis deleniti deserunt doloremque nemo exercitationem corrupti enim, id nesciunt odit saepe harum.</span> temporibus illo consequatur distinctio aperiam veniam qui quisquam unde perferendis culpa tenetur aut repellat provident quibusdam fugiat sint sunt est?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<div style="background-color: aqua;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ea provident minima expedita, saepe impedit perspiciatis, magni dignissimos officiis architecto necessitatibus fugit eaque mollitia beatae, aperiam harum debitis ex quaerat.</div> Incidunt fugiat cum similique at consequuntur nobis iusto officia provident nulla. Quidem distinctio, nemo quod ullam amet voluptas placeat architecto culpa quisquam?</p>
+
+
+    <h4>Groceries</h4>
+    <ul style="background-color: yellowgreen;border:2px solid red;" >
+        <li>Cabbage</li>
+        <li>Carrot</li>
+        <li>Beetroot</li>
+        <ul>
+            <li>Pink Beetroot</li>
+        </ul>
+    </ul>
+    <h4>To do list</h4>
+    <ol>
+        <li>Wakeup early</li>
+        <li>Workout</li>
+        <li>Meditate</li>
+        <li>Start Working</li>
+        <ol>
+            <li>Learn and earn</li>
+        </ol>
+    </ol>
+    <dl>
+        <dt>Dragon</dt>
+        <dd>Big creature with good strength</dd>
+    </dl>
+
+    <table border="1" style="background-color: black;">
+        <tr style="background-color: aqua;" align="center">
+            <th width="100">Sunday</th>
+            <th width="100">Monday</th>
+            <th width="100">Tuesday</th>
+            <th width="100">Wednesday</th>
+            <th width="100">Thursday</th>
+            <th width="100">Friday</th>
+            <th width="100">Saturday</th>
+        </tr>
+        <tr style="background-color: bisque;" align="center" >
+            <td width="100">Closed</td>
+            <td width="100">9-5</td>
+            <td width="100">9-5</td>
+            <td width="100">9-5</td>
+            <td width="100">9-5</td>
+            <td width="100">9-5</td>
+            <td width="100">Fullday</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <button onclick="goGoogle()" style="background-color: red;color:white;border-radius: 50%;">
+        Click me
+    </button>
+    <p id="forbutton">Hi Guys</p>
+    <script>
+        function goGoogle()
+        {
+            document.getElementById("forbutton").innerHTML="Goodbye";
+        }
+    </script>
+
+    <form action="index.php" method="Post" enctype="multipart/form-data">
+        <label for="username">UserName:</label>
+        <input type="text" minlength="5" id="username" placeholder="Enter your name" required>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter the password" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <br>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{4}">
+        <br>
+        <label for="bday">Birthday</label>
+        <input type="date" id="bday">
+        <br>
+        <label for="quan">Quantity</label>
+        <input type="number" id="quan">
+        <br>
+        <label for="radio">Gender:</label>
+        <label for="mr">mr</label>
+        <input type="radio" id="mr" name="title">
+        <label for="mrs">mrs</label>
+        <input type="radio" id="mrs" name="title">
+        <label for="phd">phd</label>
+        <input type="radio" id="phd" name="title">
+        
+        <br>
+        <label for="payment">Payment:</label>
+        <select id="payment">
+            <option>Visa</option>
+            <option>Mastercard</option>
+            <option>GiftCard</option>
+        </select>
+        <br>
+        <br>
+        <label for="check">Checkbox</label>
+        <input type="checkbox" id="check">
+        <br>
+        <br>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" rows="10" cols="24"></textarea>
+        <br>
+        <label for="file">File:</label>
+        <input type="file" accept="image/png">
+        <br>
+        <br>
+        <input type="submit">
+        <input type="reset">
+    </form>
+
+    <hr>
+    <br>
+    <hr>
+    <header style="background-color:mediumpurple">
+        <h1>Taylor Swift</h1>
+        
+        <a href="">Home</a>
+        <a href="">Contact</a>
+        <a href="">About</a>
+        <a href="">Product</a>
+    </header>
+<hr>
+    <main>
+        <h4>
+            Welcome to taylors world
+        </h4>
+        <img src="./images/blank space.png" height="100">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia earum veniam rem quaerat ut cupiditate, et quisquam accusamus voluptatibus aliquam distinctio asperiores natus cum reiciendis in. Illo sed suscipit iusto!</p>
+    </main>
+<br>
+<hr>
+    <footer style="background-color:mediumpurple">
+        about author:Taylor Swift<br>
+        &copy;Copyrights Reserved
+        <br>
+        <a href="mailto:sinehansathi7@gmail.com">Email me</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
