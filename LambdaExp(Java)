@@ -1,0 +1,39 @@
+package lambdaexp;
+import java.util.*;
+
+@FunctionalInterface
+interface MyLambda
+{
+    void display(String s);
+}
+
+/*class UseLambda
+{
+    public void call(MyLambda l)
+    {
+        l.display();
+    }
+}
+
+class Lambda
+{
+    public void s()
+    {
+        UseLambda u=new UseLambda();
+        u.call(()->{System.out.println("Hello");});
+    }
+}*/
+
+public class LambdaExp 
+{
+    public static void main(String[] args) 
+    {
+        /*MyLambda m=new MyLambda(){public void display(){System.out.println("Hi");}};
+        m.display();*/
+        
+        MyLambda m=System.out::println;
+        m.display("Hello world");
+        
+    }
+    
+}
