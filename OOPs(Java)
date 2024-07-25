@@ -1,0 +1,744 @@
+package oops;
+
+import java.util.*;
+
+/*class Circle
+{
+    public double radius;
+    
+    public double area()
+    {
+        return Math.PI*radius*radius;
+    }
+    
+    public double peri()
+    {
+        return Math.PI*2*radius;
+    }
+    
+    public double boundary()
+    {
+        return peri();
+    }
+}
+
+class Cylinder extends Circle
+{
+    public int height;
+    
+    public double volume()
+    {
+        return area()*height;
+    }
+}
+
+/*class Rectangle
+{
+    public int length;
+    public int breadth;
+    
+    public int area()
+    {
+        return length*breadth;
+    }
+    
+    public int perimeter()
+    {
+        return 2*(length+breadth);
+    }
+}*/
+
+/*class Rectangle
+{
+    private float length;
+    private float breadth;
+    
+    public Rectangle()
+    {
+        length=1;
+        breadth=1;
+    }
+    
+    public Rectangle(float length,float breadth)
+    {
+        this.length=length;
+        this.breadth=breadth;
+    }
+    
+    public float getLength()
+    {
+        return length;
+    }
+    
+    public float getBreadth()
+    {
+        return breadth;
+    }
+    
+    public void setLength(float length)
+    {
+        this.length=length;
+    }
+    
+    public void setBreadth(float breadth)
+    {
+        this.breadth=breadth;
+    }
+    
+    public float area()
+    {
+        return length*breadth;
+    }
+    
+    
+}
+
+class Student
+{
+    public int roll;
+    public String name;
+    public String course;
+    public int m1,m2,m3;
+    
+    public int total()
+    {
+        return m1+m2+m3;
+    }
+    
+    public float avg()
+    {
+        return total()/3;
+    }
+    
+    public char grade()
+    {
+        if(avg()>=60)
+        {
+            return 'A';
+        }
+        return 'B';
+    }
+}
+
+class Account
+{
+    public long accountNo;
+    public String name;
+    public String address;
+    public String dob;
+    public float balance;
+    public String phnNo;
+    
+    public Account(long accountNo,String name,String address,String phnNo,float balance)
+    {
+        this.accountNo=accountNo;
+        this.address=address;
+        this.balance=balance;
+        this.name=name;
+        this.phnNo=phnNo;
+    }
+    
+    public long getAccountNo(){return accountNo;}
+    public String getName(){return name;}
+    public String getAddress(){return address;}
+    public String getDob(){return dob;}
+    public float getBalance(){return balance;}
+    public String getPhoneNo(){return phnNo;}
+    
+    public void setAddress(String address)
+    {
+        this.address=address;
+    }
+    public  void setPhoneNo(String phnNo)
+    {
+        this.phnNo=phnNo;
+    }
+    
+}
+
+class SavingsAccount extends Account
+{
+    public SavingsAccount(long accountNo, String name, String address, String phnNo, float balance) {
+        super(accountNo, name, address, phnNo, balance);
+        
+    }
+    
+    public void withdraw(float rup)
+    {
+        System.out.println("Withdrawn "+rup+" Successfully");
+        balance=balance-rup;
+        System.out.println("Your current balance is "+balance);
+    }
+    
+    public void deposit(float rup)
+    {
+        System.out.println("Rupees "+rup+" is deposited successfully");
+        balance=balance+rup;
+        System.out.println("Your current balance is "+balance);
+    }
+}
+
+class Parent
+{
+    public Parent()
+    {
+        System.out.println("Parent Constructor");
+    }
+    public Parent(int x)
+    {
+        System.out.println("Para Parent");
+    }
+}
+
+class Rectangle
+{
+    int length;
+    int breadth;
+    int x=10;
+    Rectangle()
+    {
+        length=breadth=1;
+    }
+    Rectangle(int l,int b)
+    {
+        length=l;
+        breadth=b;
+    }
+}
+
+class Cuboid extends Rectangle
+{
+    int height;
+    int x=20;
+    Cuboid()
+    {
+        height=1;
+    }
+    Cuboid(int h)
+    {
+        height=h;
+    }
+    Cuboid(int l,int b,int h)
+    {
+        super(l,b);
+        height=h;
+    }
+    public int volume()
+    {
+        return length*breadth*height;
+    }
+    public void display()
+    {
+        System.out.println(super.x);
+        System.out.println(x);
+    }
+}
+
+class Child extends Parent
+{
+    public Child()
+    {
+        System.out.println("Child Constructor");
+    }
+    public Child(int y)
+    {
+        //super(y);
+        System.out.println("Para Child");
+    }
+    
+}
+
+class Super
+{
+    public void display()
+    {
+        System.out.println("Super class display");
+    }
+}
+
+class Sub extends Super
+{
+    @Override
+    public void display()
+    {
+        System.out.println("Sub class display");
+    }
+}*/
+
+/*abstract class Super
+{
+    public Super()
+    {
+        System.out.println("Super Constructor");
+    }
+    public void meth1()
+    {
+        System.out.println("Super Meth1");
+    }
+    abstract public void meth2();
+}
+
+class Sub extends Super
+{
+    public void meth2()
+    {
+        System.out.println("Sub meth2");
+    }
+}
+
+abstract class Shape
+{
+    abstract double perimeter();
+    abstract double area();
+}
+
+class Rectangle extends Shape
+{
+    double length;
+    double breadth;
+    public double perimeter(){
+            return 2*(length + breadth);
+    }
+    public double area(){return length*breadth;}
+}
+
+class Circle extends Shape
+{
+    double radius;
+    double perimeter(){return 2*Math.PI*radius;}
+    double area(){return Math.PI*radius*radius;}
+}
+
+interface Test
+{
+    void meth1();
+    void meth2();
+    int X=10;
+}
+
+/*class My implements Test
+{
+    public void meth1()
+    {
+        System.out.println("Meth1");
+    }
+    public void meth2()
+    {
+        System.out.println("Meth2");
+    }
+}*/
+
+/*interface Member
+{
+    void callBack();
+}
+
+class Store
+{
+    Member mem[]=new Member[100];
+    int count=0;
+    
+    void register(Member m)
+    {
+        mem[count++]=m;
+    }
+    void inviteSale()
+    {
+        for(int i=0;i<count;i++)
+        {
+            mem[i].callBack();
+        }
+    }
+}
+
+class Customer implements Member
+{
+    String name;
+    Customer(String n)
+    {
+        name=n;
+    }
+    
+    public void callBack()
+    {
+        System.out.println("Ok,I will visit "+name);
+    }
+}
+
+/*class Outer
+{
+    int x=10;
+    class Inner
+    {
+        int y=20;
+        void innerDisplay()
+        {
+            System.out.println(x+" "+y);
+        }
+    }
+    void outerDisplay()
+    {
+        Inner i=new Inner();
+        i.innerDisplay();
+    }
+}*/
+
+/*class Outer
+{
+    public void display()
+    {
+        class Inner
+        {
+            public void show()
+            {
+                System.out.println("Hello");
+            }
+        }
+        new Inner().show();
+        
+    }
+}*/
+
+/*abstract class My
+{
+    abstract public void show();
+}
+
+/*class Outer
+{
+    public void display()
+    {
+        new My(){public void show(){System.out.println("HI");}}.show();
+    }
+}*/
+
+/*class Outer
+{
+    static int x=10;
+    int y=20;
+    
+    static class Inner
+    {
+        public void display()
+        {
+            System.out.println(x);
+        }
+    }
+}
+
+class STest
+{
+    static int x=10;
+    int y=20;
+    
+    static void disp()
+    {
+        System.out.println(x);
+    }
+}
+*/
+/*class Block
+{
+    static{
+        System.out.println("Block1");
+    }
+    static{
+        System.out.println("Block2");
+    }
+}
+
+class CoffeeMachine
+{
+    public int x=10;
+    private int coffeeqnty;
+    private int waterqnty;
+    static private CoffeeMachine My=null;
+    
+    private CoffeeMachine()
+    {
+        coffeeqnty=1;
+        waterqnty=1;
+    }
+    
+    public void dis()
+    {
+        System.out.println("Hello");
+    }
+    
+    static public CoffeeMachine getInstance()
+    {
+        if(My==null)
+        {
+            My=new CoffeeMachine();
+        }
+        return My;
+        
+    }
+}
+
+class Student
+{
+    private String rollNo;
+    private static int count=1;
+    
+    private String generateRoll()
+    {
+        String rn="Univ - "+"2023"+" - "+count++;
+        return rn;
+    }
+    public String getRoll()
+    {
+        return rollNo;
+    }
+    public Student()
+    {
+        rollNo=generateRoll();
+    }
+}*/
+
+public class OOPS {
+    /*final int PI;
+    {
+    PI=10;
+    }
+    final int Y=9;
+    final int x;
+    OOPS()
+    {
+        x=10;
+    }*/
+    public static void main(String[] args) 
+    {
+        /*Circle c1=new Circle();
+        Circle c2=new Circle();
+        c1.radius=7;
+        c2.radius=1;
+        System.out.println(c1.area());
+        System.out.println(c1.peri());
+        System.out.println(c2.area());
+        System.out.println(c2.peri());
+        Rectangle r1=new Rectangle();
+        Rectangle r2=new Rectangle();
+        r1.length=2;
+        r1.breadth=4;
+        r2.length=3;
+        r2.breadth=5;
+        System.out.println(r1.area());
+        System.out.println(r1.perimeter());System.out.println(r2.area());System.out.println(r2.perimeter());
+        Student s=new Student();
+        s.roll=1;
+        s.course="Computer";
+        s.name="Rock";
+        s.m1=80;
+        s.m2=90;
+        s.m3=70;
+        System.out.println(s.total());
+        System.out.println(s.avg());
+        System.out.println(s.grade());
+        System.out.println(s.course);
+        System.out.println(s.name);
+        Rectangle r=new Rectangle();
+        System.out.println(r.area());
+        System.out.println(r.getLength());
+        Subject s[]=new Subject[3];
+        s[0]=new Subject("1","Ds");
+        s[1]=new Subject("2","Algo");
+        System.out.println(s[1].getsubname());
+        Cylinder c=new Cylinder();
+        c.radius=1;
+        c.height=2;
+        System.out.println(c.area());
+        System.out.println(c.volume()); 
+        SavingsAccount s=new SavingsAccount(1,"Rocky","Mumbai","8585858",1000);
+        System.out.println(s.accountNo);
+        System.out.println(s.address);
+        System.out.println(s.balance);
+        System.out.println(s.name);
+        System.out.println(s.phnNo);
+        
+        s.deposit(20);
+        s.withdraw(10);
+        System.out.println(s.balance);*/
+        
+        //Child c=new Child(20);
+        
+        //Cuboid c=new Cuboid(5,3,10);
+        //c.display();
+        //Super s=new Sub();
+        //s.meth1();
+        //s.meth2();
+        /*Test t=new My();
+        t.meth1();
+        t.meth2();*/
+        
+        /*Store s=new Store();
+        Customer c1=new Customer("John");
+        Customer c2=new Customer("Smith");
+        s.register(c1);
+        s.register(c2);
+        s.inviteSale();*/
+        //Test t=new My();
+        //System.out.println(Test.X);
+        
+        /*STest t=new STest();
+        STest t1=new STest();
+        t.x=20;
+        t1.disp();*/
+        //System.out.println("Main");
+        //Block b=new Block();
+        /*CoffeeMachine c=CoffeeMachine.getInstance();
+        System.out.println(c.x);
+        c.x=c.x+1;
+        CoffeeMachine o=CoffeeMachine.getInstance();
+        System.out.println(c.x);
+        System.out.println(o.x);
+        Student s=new Student();
+        Student s1=new Student();
+        System.out.println(s1.getRoll());
+        System.out.println(s.getRoll());*/
+        //fun(4);
+    }
+}
+package oops;
+
+public class Product 
+{
+    private String itemNo;
+    private String name;
+    private float price;
+    private int quantity;
+    
+    public Product(String itemNo,String name)
+    {
+        this.itemNo=itemNo;
+        this.name=name;
+    }
+    
+    public Product(String itemNo,String name,float price,int quantity)
+    {
+        this.itemNo=itemNo;
+        this.name=name;
+        this.price=price;
+        this.quantity=quantity;
+    }
+    
+    public String getItemNo()
+    {
+        return itemNo;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    public float getPrice()
+    {
+        return price;
+    }
+    
+    public int getQuantity()
+    {
+        return quantity;
+    }
+    
+    public void setPrice(float price)
+    {
+        this.price=price;
+    }
+    
+    public void setQuantity(int quantity)
+    {
+        this.quantity=quantity;
+    }
+}
+package oops;
+
+public class Customer 
+{
+    private String cusId;
+    private String name;
+    private String address;
+    private long phnNo;
+    
+    public Customer(String id,String name)
+    {
+        cusId=id;
+        this.name=name;
+    }
+    
+    public Customer(String id,String n,String add,long num)
+    {
+        cusId=id;
+        name=n;
+        address=add;
+        phnNo=num;
+    }
+    
+    public String getId()
+    {
+        return cusId;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    public String getAddress()
+    {
+        return address;
+    }
+    
+    public long getNum()
+    {
+        return phnNo;
+    }
+    
+    public void setAddress(String addre)
+    {
+        this.address=addre;
+    }
+    public void setPhn(long f)
+    {
+        phnNo=f;
+    }
+}
+package oops;
+
+public class Subject 
+{
+    private String subid;
+    private String subname;
+    private int maxmarks;
+    private int marksobt;
+    
+    public Subject(String subid,String subname)
+    {
+        this.subid=subid;
+        this.subname=subname;
+    }
+    
+    public Subject(String subid,String subname,int maxmarks,int marksobt)
+    {
+        this.marksobt=marksobt;
+        this.maxmarks=maxmarks;
+        this.subid=subid;
+        this.subname=subname;
+    }
+    
+    public String getId(){return subid;}
+    public String getsubname(){return subname;}
+    public int getMaxmarks(){return maxmarks;}
+    public int getmarks(){return marksobt;}
+    
+    public void setMax(int ma)
+    {
+        maxmarks=ma;
+    }
+    
+    public void setMarksobt(int marks)
+    {
+        marksobt=marks;
+    }
+}
