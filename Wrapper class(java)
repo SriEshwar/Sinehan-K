@@ -1,0 +1,59 @@
+package wrapperclass;
+import java.lang.reflect.*;
+
+enum Dept
+{
+    CS("CSE Department"),IT("IT Department"),ECE("ECE department");
+    String name;
+    private Dept(String name)
+    {
+        this.name=name;
+    }
+    public String getName()
+    {
+        return name;
+    }
+}
+
+class My
+{
+    private int a;
+    protected int b;
+    public int c;
+    int d;
+    
+    public My()
+    {
+        
+    }
+    public void show(String name,int a){}
+    
+}
+
+public class WrapperClass 
+{    
+    public static void main(String[] args) 
+    {
+        /*Integer a=Integer.valueOf(10);
+        Float b=Float.valueOf("10.2f");
+        byte bb=14;
+        Byte c=Byte.valueOf(bb);
+        
+        System.out.println(c.doubleValue());*/
+        /*Dept d=Dept.ECE;
+        System.out.println(d.getName());*/
+        
+        Class c=My.class;
+        System.out.println(c);
+        Field field[]=c.getDeclaredFields();
+        for(Field f:field)
+            System.out.println(f);
+        Method m[]=c.getMethods();
+        for(Method mm:m)
+        {
+            System.out.println(mm);
+        }
+        
+    }
+    
+}
