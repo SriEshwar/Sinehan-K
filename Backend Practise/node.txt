@@ -1,0 +1,9 @@
+Requests:
+url
+method
+headers
+
+Response:
+setHeader
+write
+end
