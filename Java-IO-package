@@ -1,0 +1,298 @@
+package inputoutputstreams;
+import java.util.*;
+import java.io.*;
+
+class Producer extends Thread
+{
+    OutputStream os;
+    public Producer(OutputStream o)
+    {
+        os=o;
+    }
+    public void run()
+    {
+        int count=1;
+        while(true)
+        {
+            try{
+            os.write(count);
+            os.flush();
+            System.out.println("Producer "+count++);
+            System.out.flush();
+            Thread.sleep(10);
+            }catch(Exception e){}
+            
+        }
+    }
+}
+
+class Consumer extends Thread
+{
+    InputStream is;
+    public Consumer(InputStream i)
+    {
+        is=i;
+    }
+    public void run()
+    {
+        int x;
+        while(true)
+        {
+            try
+            {
+              x=is.read();  
+              System.out.println("consumer "+x);
+              System.out.flush();
+              Thread.sleep(10);
+            }
+            catch(Exception e)
+            {
+                
+            }
+        }
+    }
+}
+
+class Customer implements Serializable
+{
+    String cusid;
+    String name;
+    String phn;
+    static int count=1;
+    Customer()
+    {
+        
+    }
+    Customer(String n,String p)
+    {
+        cusid="c"+count++;
+        name=n;
+        phn=p;
+    }
+    public String toString()
+    {
+        return "Customer id "+cusid+" Name "+name+" Phone "+phn;
+    }
+}
+
+class Student implements Serializable
+{
+    int roll;
+    String name;
+    String dept;
+    Student(){}
+}
+
+public class InputOutputStreams 
+{
+    public static void main(String[] args) throws Exception
+    {
+        /*FileOutputStream fos=new FileOutputStream("C:/MyJava/Text.txt");
+        String str="Learn Java Programming";
+        byte[] b=str.getBytes();
+        fos.write(b);
+        fos.close();*/
+        //FileInputStream fis=new FileInputStream("C:/MyJava/Text.txt");
+        /*byte b[]=new byte[fis.available()];
+        fis.read(b);
+        String str=new String(b);
+        System.out.println(str);*/
+        //int x;
+        /*while((x=fis.read())!=-1)
+        {
+            System.out.println((char)x);
+        }*/
+        /*do
+        {
+            x=fis.read();
+            if(x!=-1)
+                System.out.print((char)x);
+        }while(x!=-1);*/
+        
+        /*FileOutputStream fos=new FileOutputStream("C:/MyJava/Destination.txt");
+        FileInputStream fis1=new FileInputStream("C:/MyJava/Source1.txt");
+        FileInputStream fis2=new FileInputStream("C:/MyJava/Source2.txt");*/
+        /*int x;
+        while((x=fis.read())!=-1)
+        {
+            if((char)x!=' ')
+                fos.write((char)x+32);
+            else
+                fos.write((char)x);
+        }
+        fos.close();
+        fis.close();*/
+        /*SequenceInputStream s=new SequenceInputStream(fis1,fis2);
+        int x;
+        while((x=s.read())!=-1)
+        {
+            fos.write((char)x);
+        }
+        fis1.close();
+        fis2.close();
+        s.close();
+        fos.close();*/
+        
+        
+        /*ByteArrayOutputStream bos=new ByteArrayOutputStream();
+        bos.write('a');
+        bos.write('b');
+        bos.write('y');
+        bos.writeTo(new FileOutputStream("C:/MyJava/Text.txt"));
+        bos.close();*/
+        
+        /*CharArrayWriter cr=new CharArrayWriter();
+        cr.write('v');
+        cr.write('z');
+        String s=new String(cr.toCharArray());
+        System.out.println(s);
+        cr.close();*/
+        
+        /*FileOutputStream fos=new FileOutputStream("C:/MyJava/Text.txt");
+        String str="Learn Java Programming";
+        byte b[]=str.getBytes();
+        fos.write(b);
+        fos.close();*/
+        
+        /*FileInputStream fis=new FileInputStream("C:/MyJava/Text.txt");
+        BufferedInputStream bis=new BufferedInputStream(fis);
+        
+        System.out.println((char)bis.read());
+        System.out.println((char)bis.read());
+        System.out.println((char)bis.read());
+        bis.mark(10);
+        System.out.println((char)bis.read());System.out.println((char)bis.read());
+        bis.reset();
+        System.out.println((char)bis.read());System.out.println((char)bis.read());*/
+        /*int x;
+        while((x=bis.read())!=-1)
+        {
+            System.out.print((char)x);
+        }
+        System.out.println();*/
+        /*PipedInputStream pis=new PipedInputStream();
+        PipedOutputStream pos=new PipedOutputStream();
+        Producer p=new Producer(pos);
+        Consumer c=new  Consumer(pis);
+        pos.connect(pis);
+        p.start();
+        c.start();*/
+        
+        /*RandomAccessFile r=new RandomAccessFile("C:/MyJava/Text.txt","rw");
+        System.out.println((char)r.read());
+        r.seek(3);
+        System.out.println((char)r.read());
+        System.out.println(r.getFilePointer());*/
+        
+        /*File f=new File("C:/MyJava");
+        System.out.println(f.isDirectory());
+        File str[]=f.listFiles();
+        for(File g:str)
+        {
+            System.out.print(g.getName()+"  ");
+            System.out.println(g.getPath());
+        }*/
+        
+        /*FileOutputStream fos=new FileOutputStream("C:/MyJava/Text.txt");
+        PrintStream ps=new PrintStream(fos);
+        Student s=new Student();
+        s.roll=10;
+        s.name="Rocky";
+        s.dept="ECE";
+        ps.println(s.roll);
+        ps.println(s.name);
+        ps.println(s.dept);
+        ps.close();
+        fos.close();*/
+        
+        /*FileInputStream fis=new FileInputStream("C:/MyJava/Text.txt");
+        BufferedReader br=new BufferedReader(new InputStreamReader(fis));
+        Student s=new Student();
+        s.roll=Integer.parseInt(br.readLine());
+        s.name=br.readLine();
+        s.dept=br.readLine();
+        System.out.println(s.roll+" "+s.name+" "+s.dept);
+        fis.close();
+        br.close();*/
+        
+        /*FileInputStream fos=new FileInputStream("C:/MyJava/Text.txt");
+        DataInputStream ds=new DataInputStream(fos);
+        
+        Student s=new Student();
+        s.roll=ds.readInt();
+        s.name=ds.readUTF();
+        s.dept=ds.readUTF();
+        System.out.println(s.roll+" "+s.name+s.dept);
+        fos.close();
+        ds.close();
+        */
+        
+        /*FileOutputStream fos=new FileOutputStream("C:/MyJava/Text.txt");
+        ObjectOutputStream oos=new ObjectOutputStream(fos);
+        Student s=new Student();
+        s.dept="ECE";
+        s.name="Elizabeth";
+        s.roll=24;
+        oos.writeObject(s);
+        fos.close();
+        oos.close();*/
+        
+        /*FileInputStream fis=new FileInputStream("C:/MyJava/Text.txt");
+        ObjectInputStream oos=new ObjectInputStream(fis);
+        Student s;
+        s=(Student)oos.readObject();
+        System.out.println(s.roll+" "+s.name+" "+s.dept);
+        fis.close();
+        oos.close();*/
+        
+        /*float list[]={10.2f,4.5f,6.6f};
+        int length=list.length;
+        FileOutputStream fos=new FileOutputStream("C:/MyJava/Text.txt");
+        DataOutputStream dos=new DataOutputStream(fos);
+        dos.writeInt(length);
+        for(float a:list)
+        {
+            dos.writeFloat(a);
+        }
+        fos.close();
+        dos.close();
+        
+        FileInputStream fis=new FileInputStream("C:/MyJava/Text.txt");
+        DataInputStream dis=new DataInputStream(fis);
+        int l=dis.readInt();
+        for(int i=0;i<l;i++)
+        {
+            System.out.println(dis.readFloat());
+        }
+        dis.close();
+        fis.close();*/
+        
+        Customer c1=new Customer("Jacky","9876543");
+        Customer c2=new Customer("King","9776543");
+        Customer c3=new Customer("Law","9976543");
+        
+        Customer list[]={c1,c2,c3};
+        int length=list.length;
+        
+        FileOutputStream fos=new FileOutputStream("C:/MyJava/Text.txt");
+        ObjectOutputStream o=new ObjectOutputStream(fos);
+        o.writeInt(length);
+        for(Customer l:list)
+        {
+            o.writeObject(l);
+        }
+        o.close();
+        fos.close();
+        
+        FileInputStream fis=new FileInputStream("C:/MyJava/Text.txt");
+        ObjectInputStream i=new ObjectInputStream(fis);
+        Customer c;
+        int l=i.readInt();
+        for(int j=0;j<l;j++)
+        {
+            System.out.println(i.readObject().toString());
+        }
+        i.close();
+        fis.close();
+    }
+}
