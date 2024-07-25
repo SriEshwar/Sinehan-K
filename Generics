@@ -1,0 +1,84 @@
+package javagenerics;
+import java.util.*;
+
+class Data<T>
+{
+    private T data;
+    
+    public void setData(T v)
+    {
+        data=v;
+    }
+    public T getData()
+    {
+        return data;
+    }
+}
+
+class MyArray<T>
+{
+    T[]a=(T[])new Object[10];
+    static int length=0;
+    
+    public void append(T v)
+    {
+        a[length++]=v;
+    }
+    
+    public void display()
+    {
+        for(int i=0;i<length;i++)
+        {
+            System.out.println(a[i]);
+        }
+    }
+}
+
+public class JavaGenerics 
+{
+    //T[]list=(T[])new Object[3];
+    /*static <T> void show(T[] list)
+    {
+        for(T x:list)
+            System.out.println(x);
+    }*/
+    
+    /*static void fun(MyArray<? extends Number> list)
+    {
+        list.display();
+    }*/
+    
+    public static void main(String[] args) 
+    {
+        /*Object o=new String("Hi");
+        o=10;
+        o=new Integer(10);
+        String str=(String)o;*/
+        
+        /*JavaGenerics<Integer> s=new JavaGenerics<Integer>();
+        s.list[0]=1;
+        s.list[1]=2;
+        s.list[2]=3;*/
+        /*Data<Integer> d=new Data<>();
+        d.setData(3);
+        System.out.println(d.getData());*/
+        /*MyArray<Integer> s=new MyArray<>();
+        s.append(3);
+        s.append(9);
+        s.append(7);
+        s.display();*/
+        //Object a[]={"hi",2,3,4,5};
+        //show(a);
+        
+        /*MyArray<Integer> a=new MyArray();
+        a.append(1);
+        a.append(2);
+        MyArray b=new MyArray();
+        b.append("hisjdb");
+        b.append("bye");
+        fun(a);
+        fun(b);*/
+        
+    }
+    
+}
